@@ -2,8 +2,6 @@ Hello and welcome to this blog. Edit the `index.md` file to change this content.
 
 ![Image of fast.ai logo](images/logo.png)
 
-## Alex's Blog
+## Alex-Fan777
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
-
-Blog
+Fast.ai [link to fast.ai](https://www.fast.ai).
