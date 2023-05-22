@@ -63,5 +63,16 @@ BaseLoss is used to provide a unified interface and shared functions for specifi
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/fc4fbc97-8db0-45b4-b3b6-9f22e9589115)
 CrossEntropyLossFlat is commonly used in multi category classification tasks, especially when the target label is in the form of one hot encoding. It provides a convenient and efficient way to calculate the cross entropy loss, and can be seamlessly integrated with other fastai functions (such as model training and verification).
 
+What is CrossEntrypy function?
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/ce171666-dfe6-4d1c-a6b4-c36a2e90e386)
+
+Note:
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/84332ad0-ba80-4760-b72e-832a5f6333b9)
+
+In summary, Cross-entropy is a measure of the difference between two probability distributions for a given random variable or set of events.
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/8ccd2ab0-b0dc-47d9-b49a-9a0770161e82)
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/db221faa-9812-4c54-a00d-a421b53af7bf)
+
+
 
 
