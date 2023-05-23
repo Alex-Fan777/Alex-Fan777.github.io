@@ -1,22 +1,21 @@
 #Fast ai
-##The explaination of codes from the fast ai
-First of all, we should do the preparation before we want to deal with the data. We need get a socket and know the website, go to the website and download somme images
-and some software which is necessary to do the next step.
+##The explaination of T-SNE
+Accordding to the defination, T-SNE is an uncertain or random algorithm, which is why the results of each run will change slightly. Even if it cannot preserve the 
+variance in each run, you can use hyperparameter adjustment to preserve the distance between each class. This algorithm involves many calculations and calculations.
+Therefore, this algorithm requires a lot of time and space to calculate
 
-import socket,warnings
-try:
-    socket.setdefaulttimeout(1)
-    socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(('1.1.1.1', 53))
-except socket.error as ex: raise Exception("STOP: No internet. Click '>|' in top right and set 'Internet' switch to on")
+How can we understand it quickly?
+T-SNE is mainly used for dimensionality reduction of data and has a wide range of applications. For simplicity, the following is an example of t-SNE reducing 2D 
+data to one-dimensional.
+https://img-blog.csdnimg.cn/2019042920433744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpZXNoYW5neGlu,size_16,color_FFFFFF,t_70
 
-For example, like the codes, It is a simple method to check internet connectivity. It attempts to establish a TCP connection with port 53 of the DNS server with IP
-address 1.1.1.1 to test whether the internet connection is available.
 
-if we want to download some software or something we can find on the Internet, we can use this to do things like that.
 
-!pip install -Uqq duckduckgo_search
 
-If we want to do something to deal with the images, we can do things like this
+
+
+
+
 
 
 
