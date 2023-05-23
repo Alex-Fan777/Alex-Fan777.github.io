@@ -74,5 +74,71 @@ In summary, Cross-entropy is a measure of the difference between two probability
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/db221faa-9812-4c54-a00d-a421b53af7bf)
 
 
+##CNN
+Convolutional neural networks (CNN or ConvNet) are a deep learning network architecture that learns directly from data. CNN is particularly suitable for finding patterns in images to recognize objects, classes, and categories. They can also effectively classify audio, time series, and signal data.
+
+Before the emergence of CNN, images were a challenge for artificial intelligence for two reasons:
+
+The amount of data required for image processing is too large, resulting in high costs and low efficiency
+
+It is difficult to preserve the original features of images during the digitization process, resulting in low accuracy in image processing
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/30857918-dd5b-4dc8-b857-77eb9c640d0b)
+Now, any random image is 1000 × Above 1000 pixels, each pixel has three RGB parameters to represent color information.
+
+
+
+If we handle a 1000 × We need to process 3 million parameters for a 1000 pixel image!
+one thousand × one thousand × 3=3,000,000
+Processing such a large amount of data is very resource intensive, and this is only a relatively small image!
+The first problem solved by convolutional neural networks - CNN is to "simplify complex problems", reduce a large number of parameters into a small number of parameters, and then perform processing.
+More importantly, in most scenarios, dimensionality reduction does not affect the results. For example, reducing a 1000 pixel image to 200 pixels does not affect the visual recognition of whether the image is a cat or a dog, and the same applies to machines.
+
+The convolutional layer is responsible for extracting local features in the image; The pooling layer is used to significantly reduce the magnitude of parameters (dimensionality reduction); The fully connected layer is similar to the part of a traditional neural network, used to output the desired results.
+
+Convolution - Extracting Features
+
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/db66a594-172e-4d37-95d1-86706fc99c02)
+Pooling layer (down sampling) - data dimensionality reduction to avoid overfitting
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/5d5481aa-472e-4e6d-8615-6d14bd52acbd)
+In the above image, we can see that the original image is 20 × 20, we downsample it with a sampling window of 10 × 10, ultimately downsampling it into a 2 × A feature map of size 2. The reason for doing this is because even after completing the convolution, the image is still large (because the convolution kernel is relatively small), so in order to reduce the data dimension, downsampling is performed.
+Conclusion: Pooling layer can reduce the data dimension more effectively than convolution layer, which can not only greatly reduce the amount of calculation, but also effectively avoid overfitting.
+
+Fully connected layer - output results
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/5bca134e-bee9-4c0c-9503-b883ec69581c)
+
+Convolutional layer - Pooled layer - Convolutional layer - Pooled layer - Convolutional layer - Fully connected layer
+![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/63915c5a-0ede-4c03-9841-52ae7ff6dfa2)
+
+###What are the practical applications of CNN?
+Convolutional Neural Networks - CNN is good at processing images. And video is an overlay of images, so it is also good at handling video content. Here are some mature applications for everyone:
+
+Image classification and retrieval
+Image classification is a relatively basic application that can save a lot of labor costs and effectively classify images. For some specific fields of images, the accuracy of classification can reach over 95%, which is already considered a highly available application.
+
+Target localization detection
+Able to locate targets in the image and determine their position and size
+
+Target segmentation
+Simply understood, it is a pixel level classification.
+He can distinguish foreground and background at the pixel level, and at a higher level, he can also identify and classify targets
+
+In summary,
+The value of CNN:
+
+
+
+Being able to effectively reduce the dimensionality of images with large amounts of data into small amounts of data (without affecting the results)
+
+Ability to preserve the features of images, similar to human visual principles
+
+The basic principle of CNN:
+
+
+
+Convolutional layer - The main function is to preserve the features of the image
+
+Pooling layer - mainly used to reduce the dimension of data, which can effectively avoid overfitting
+
+Fully connected layer - output the desired results based on different tasks
 
 
