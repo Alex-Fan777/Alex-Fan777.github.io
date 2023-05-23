@@ -144,3 +144,32 @@ Pooling layer - mainly used to reduce the dimension of data, which can effective
 Fully connected layer - output the desired results based on different tasks
 
 
+
+
+
+
+
+
+Reference:
+https://zhuanlan.zhihu.com/p/58883095
+https://www.youtube.com/watch?v=6ArSys5qHAU&t=171s
+https://easyai.tech/ai-definition/cnn/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
