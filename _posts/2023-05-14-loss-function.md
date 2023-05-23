@@ -73,6 +73,8 @@ In summary, Cross-entropy is a measure of the difference between two probability
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/8ccd2ab0-b0dc-47d9-b49a-9a0770161e82)
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/db221faa-9812-4c54-a00d-a421b53af7bf)
 
+The reason why we choose the Crossentrypy is that this loss functions is the best to predict the possibility of the real machine to do this.
+
 
 ##CNN
 Convolutional neural networks (CNN or ConvNet) are a deep learning network architecture that learns directly from data. CNN is particularly suitable for finding patterns in images to recognize objects, classes, and categories. They can also effectively classify audio, time series, and signal data.
