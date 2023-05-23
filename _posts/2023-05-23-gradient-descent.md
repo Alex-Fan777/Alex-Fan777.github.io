@@ -139,7 +139,9 @@ We can change the learning rate to change the basic gradient descent. Definitely
 
 
 
-
+Reference:
+https://www.youtube.com/watch?v=sDv4f4s2SB8
+https://zhuanlan.zhihu.com/p/31630368
 
 
 
