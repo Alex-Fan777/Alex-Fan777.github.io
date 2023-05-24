@@ -140,6 +140,10 @@ The steps of deep learning are signal ->feature ->value. The feature is chosen b
 
 
 
+Reference:
+https://www.youtube.com/watch?v=aircAruvnKk
+https://blog.csdn.net/WangYouJin321/article/details/90691112
+https://aws.amazon.com/cn/what-is/neural-network/
 
 
 
