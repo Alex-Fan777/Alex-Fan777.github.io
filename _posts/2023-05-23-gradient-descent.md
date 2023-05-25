@@ -1,17 +1,12 @@
 # Gradient Descent
-
-
-Gradient descent is a type of iterative method that can be used to solve least squares problems (both linear and nonlinear). Gradient Descent is one of the most 
-commonly used methods to solve the model parameters of machine learning algorithm, that is, the constrained optimization problem. Another commonly used method is 
-the least square method. When solving the minimum value of the loss function, the gradient descent method can be used to iteratively solve step by step to obtain 
-the minimum value of the loss function and model parameters.
-
-Gradient Descent Optimization is the most commonly used optimization algorithm for neural network model training.
-
-Gradient is the derivative
-The gradient descent method is a method of finding the minimization of the objective function by calculating its derivative.
-The purpose of gradient descent is to find the value of the independent variable corresponding to the value of the objective function minimization, in order to find
-the independent variable X.
+Gradient descent is an iterative method commonly used to solve least squares problems in machine learning, whether linear or nonlinear. It is a common constrained 
+optimization method used to determine the parameter values in machine learning models. In addition, the least squares method is also one of the commonly used 
+methods. We can use gradient descent method to solve the minimum value of loss function iteratively step by step, so as to obtain the optimal loss function and 
+model parameters.
+Gradient descent optimization is one of the most commonly used algorithms in neural network model training. Its core idea is to find the value of the independent 
+variable that minimizes the objective function by calculating its derivative (gradient). In short, the goal of gradient descent is to find the value of the 
+independent variable X that can minimize the objective function. By constantly updating the parameters, the gradient descent method can gradually approach the 
+optimal solution, that is, the minimum value of the loss function.
 
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/e8e81b7c-8ea6-4651-8802-1376c34d09a0)
 We will use gradient descent to find intercept and the slope.
@@ -90,14 +85,19 @@ In summary:
 
 Commonly used gradient descent method
 Stochastic Gradient Descent Algorithm
-In order to overcome the disadvantage of batch gradient descent, some people have proposed the Stochastic Gradient Descent algorithm, which randomly selects only 
-one sample for calculation each time the coefficient is updated. Therefore, it can not only reduce the number of iterations, save calculation time, but also
-prevent memory overflow and reduce computational overhead. However, random gradient descent also has a drawback, as each update may not follow the correct
-direction, which can lead to optimization fluctuations (disturbances). That is, if the parameter update frequency is too fast, there may be oscillations of the 
-objective function value near the optimal value, and high-frequency parameter updates can lead to high square errors. However, on the other hand, one advantage 
-of the fluctuation caused by the random gradient decline is that for areas like basins (that is, many local minimum points), the characteristics of this 
-fluctuation may make the optimization direction jump from the current local minimum point to another better local minimum point, so that for non convex function,
-it may eventually converge to a better local extreme point, or even the global extreme point.
+The random gradient descent algorithm is an optimization method proposed to overcome some problems of batch gradient descent. Unlike batch gradient descent where 
+all samples are used for parameter updates each time, random gradient descent only randomly selects one sample at a time to calculate the gradient and update the 
+parameters. The advantage of doing so is that it can reduce the number of iterations, save computational time, and avoid memory overflow and reduce computational 
+overhead.
+
+However, there is also a drawback to random gradient descent, which is that each parameter update may not follow the correct direction, which may lead to 
+fluctuations in the optimization process. In other words, if parameter updates are too frequent, it may approach the objective function value of the optimal 
+value, and high-frequency parameter updates may lead to higher square errors.
+
+On the other hand, fluctuations caused by random gradient descent also have an advantage. In areas such as basins (where there are many local minima), 
+this fluctuation can cause the optimization process to jump from the current local minima to another better local minima, and may even eventually converge to a 
+better local or global minima. Therefore, although random gradient descent may introduce some fluctuations, it also provides a certain opportunity for the 
+optimization process to find better solutions.
 
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/47566178-6b96-433a-a793-8a48930cb5ca)
 
@@ -105,18 +105,28 @@ However, it has its drawbacks.
 Due to only randomly selecting one sample per iteration, the randomness is relatively high, so the descent process is very tortuous.
 
 Gradient descent algorithm optimization
-Although the gradient descent algorithm has excellent performance and is widely used, there are also some challenges and problems that need to be solved at the
-same time: it is very difficult to choose a reasonable learning rate, assuming that the learning rate is too small, it will lead to very slow convergence speed;
-Assuming that the learning rate is too high, it will hinder convergence and oscillate near the extreme point. Learning rate scheduling, also known as learning 
-rate scheduling, attempts to change the learning rate during each update process, such as annealing. Generally, a predetermined strategy is used or a smaller
-threshold is attenuated in each iteration. Regardless of the adjustment method, fixed settings must be made in advance. This side cannot adapt to the
-characteristics of the dataset learned each time.
+Although gradient descent algorithm performs well in optimization problems and is widely used, it also faces some difficulties.
 
+One difficulty is choosing the appropriate learning rate. If the learning rate is set too low, the convergence speed of the algorithm will be very slow. If the 
+learning rate is set too high, it will cause the algorithm to oscillate near the extreme point and hinder convergence. To solve this problem, learning rate 
+scheduling, also known as learning rate decay, can be used to change the learning rate during each parameter update, such as using annealing. Usually, a 
+predetermined strategy or a certain threshold is used to gradually reduce the learning rate. However, regardless of the adjustment method used, fixed settings 
+need to be made in advance, and adaptive adjustments cannot be made based on the characteristics of the dataset learned each time.
 
+Therefore, choosing the appropriate learning rate remains a challenge, and it is necessary to determine the optimal setting through experience and experimentation 
+in practice. Researchers have been exploring more intelligent learning rate adjustment methods to improve the performance and adaptability of gradient descent 
+algorithms.
 
-All parameters of the model are updated at the same learning rate every time. Assuming that the data features are sparse or each feature has different statistical
-features and spaces, then it is not possible to use the same learning rate for each parameter in each update. Those very rare features should use a relatively
-high learning rate. For non convex objective functions. Easy falls into those suboptimal local extremum points, as in neural networks.
+It is not appropriate to use the same learning rate to update all parameters of the model when the data features are sparse or each feature has different 
+statistical characteristics. Some features may be very rare and require a higher learning rate to update faster. For non convex objective functions, using the 
+same learning rate can easily trap into suboptimal local extremum points, just like in neural networks.
+
+Therefore, in this case, we need to make personalized adjustments to the learning rate. We should determine different learning rates based on the importance of 
+each parameter and the statistical characteristics of the features. For sparse or rare features, we can choose a relatively high learning rate for faster 
+parameter updates. This can better utilize the information of these important features. At the same time, in non convex objective functions, we need to carefully 
+choose the learning rate to avoid premature falling into suboptimal local extremum points, and instead try more flexible learning rate adjustment strategies to 
+better explore the entire parameter space and find better global extremum points.
+
 
 (1) The step size selection of the algorithm. In the previous algorithm description, I mentioned that the step size is 1, but actually the value depends on the 
 data sample. You can take more values, run the algorithm from large to small, and see the iterative effect. If the loss function is getting smaller, it means that
