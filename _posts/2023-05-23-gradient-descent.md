@@ -1,6 +1,6 @@
-#Gradient Descent
+# Gradient Descent
 
-##Defination
+
 Gradient descent is a type of iterative method that can be used to solve least squares problems (both linear and nonlinear). Gradient Descent is one of the most 
 commonly used methods to solve the model parameters of machine learning algorithm, that is, the constrained optimization problem. Another commonly used method is 
 the least square method. When solving the minimum value of the loss function, the gradient descent method can be used to iteratively solve step by step to obtain 
