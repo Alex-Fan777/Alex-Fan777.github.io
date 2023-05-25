@@ -2,10 +2,12 @@
 
 ## defination of loss function
 
-A loss function is a mathematical function that assigns a real number to an event or the values of one or more variables. This number typically represents a measure of "cost" or "risk" associated with the event.
+The loss function is a mathematical function, which is used to measure the difference between the predicted results and the actual results. It is a standard for measuring the accuracy or degree of error of predictions. Its function is like a measure of cost or risk.
 
-The purpose of a loss function is to quantify the discrepancy between the predicted outcome and the actual
-outcome, providing a basis for optimization in various applications. In practice, the loss function is commonly utilized as a learning criterion, guiding the model's optimization process by minimizing the assigned loss. The loss function may incorporate components from different levels of a hierarchical system, allowing for a comprehensive evaluation of the event or variables involved.
+In machine learning and optimization problems, loss function is usually used to guide the training and optimization process of the model. By minimizing the value of the loss function, more accurate prediction results can be generated. The loss function can contain different levels of components to comprehensively evaluate
+the events or variables involved.
+
+The loss function helps us to measure the difference between the predicted and actual results, and provides a guidance method for optimizing the model. It allows us to minimize this difference as much as possible, thereby improving the performance of the model
 
 ## some loss function
 
@@ -36,10 +38,11 @@ SVM uses this loss function.
 
 ## Multiple loss function
 
-In the context of multi-task learning, multiple tasks are tackled simultaneously, leveraging shared knowledge between them. Multi-task learning inherently involves addressing multiple objectives, as different tasks may have conflicting requirements, requiring a trade-off. To handle this, a common approach is to optimize a proxy objective that combines per-task losses through a weighted linear combination. However, this approach is only effective when the tasks are not 
-in direct competition, which is often not the case.
+In multitasking learning, we process multiple tasks simultaneously and utilize the knowledge shared between them. However, there may be conflicting requirements between different tasks that require trade-offs and balance. To solve this problem, a common method is to use surrogate targets to optimize and combine the loss function of each task through weighted linear combination. By adjusting the weights, we can balance the importance between different tasks.
 
-In general, there exists a delicate balance among multiple losses, and even for individual tasks, there may be penalties associated with adjusting weights. Achieving an appropriate combination typically involves fine-tuning hyperparameters to strike a suitable compromise.
+However, this trade-off is not easy. Even for a single task, adjusting the weight of the loss function can be challenging. Choosing the right combination of weights usually requires fine-tuning hyperparameter and making appropriate compromises. This is because the relationships between tasks may be complex, and it may be necessary to adjust the weights of different tasks according to the actual situation to balance the impact between different tasks.
+
+In practice, we need to carefully design and select the weight of the loss function in order to obtain good performance in multi task learning. This may involve a combination of task understanding, experience, and experimentation to find appropriate trade-offs and combinations.
 
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/c0b5d2bd-671a-4b4c-a9b8-d25ed1d4e1ba)
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/7106135b-7407-4931-b044-84230a7671dc)
@@ -74,11 +77,17 @@ The reason why we choose the Crossentrypy is that this loss functions is the bes
 
 
 ## CNN
-Convolutional neural networks (CNN or ConvNet) are a type of deep learning network architecture designed to learn directly from data. CNNs are especially well-suited for detecting and identifying patterns in images, enabling object recognition, class prediction, and categorization tasks. However, CNNs are not limited to image processing alone; they can also effectively classify other types of data such as audio, time series, and signal data.
+Previously, image processing was a challenging task for artificial intelligence, mainly due to the following two reasons:
 
-Before the emergence of CNN, images were a challenge for artificial intelligence for two reasons:
+Large amount of data: Image data usually has a large number of pixels and dimensions, so a large amount of data is needed to train the model. Traditional machine learning algorithms face computational and storage challenges when processing large-scale image data, resulting in high costs and low efficiency.
 
-The amount of data required for image processing is too large, resulting in high costs and low efficiency
+Complex pattern recognition: There are complex patterns and structures in images, such as edges, textures, shapes, etc. Traditional machine learning algorithms often struggle to capture these abstract features, requiring manual extraction and selection of appropriate features. This is a heavy and difficult task for different types of image tasks.
+
+However, with the emergence of convolutional neural networks, these problems have been effectively addressed. CNN is a deep learning network architecture aimed at directly learning feature representations from data. CNN is particularly suitable for image processing, as it can automatically learn patterns and features in images, and achieve object recognition, category prediction, and classification tasks. Through convolutional and pooling layers, CNN can effectively process spatial relationships and local features in images.
+
+In addition, CNN is not limited to image processing, but can also be successfully applied to other types of data, such as audio, time series, and signal data. By adjusting the network structure and representation of input data appropriately, CNN can adapt to different data types and tasks, and demonstrate strong classification and recognition capabilities.
+
+Therefore, the emergence of CNN has greatly changed the application of artificial intelligence in image processing and other fields, making processing large-scale image data and complex pattern recognition more efficient and accurate.
 
 It is difficult to preserve the original features of images during the digitization process, resulting in low accuracy in image processing
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/30857918-dd5b-4dc8-b857-77eb9c640d0b)
@@ -86,7 +95,7 @@ Now, any random image is 1000 × Above 1000 pixels, each pixel has three RGB par
 
 
 
-When processing a 1000 × 1000 pixel image, we encounter the challenge of dealing with a massive number of parameters, specifically 3 million parameters. This poses a significant resource burden, even for a relatively small image.
+When processing a 1000 × 1000 pixel image, the challenge of dealing with a massive number of parameters, specifically 3 million parameters. This poses a significant resource burden, even for a relatively small image.
 
 Convolutional neural networks (CNNs) address this issue by simplifying complex problems and reducing the number of parameters to be processed. This reduction allows for more efficient computation. Importantly, in most scenarios, dimensionality reduction does not compromise the results. For example, reducing a 1000 pixel image to 200 pixels does not hinder visual recognition tasks like distinguishing between a cat and a dog, and the same applies to machine learning algorithms.
 
@@ -116,25 +125,14 @@ Convolutional Neural Networks - CNN is good at processing images. And video is a
 Image classification and retrieval
 Image classification is a relatively basic application that can save a lot of labor costs and effectively classify images. For some specific fields of images, the accuracy of classification can reach over 95%, which is already considered a highly available application.
 
-Target localization detection
-Able to locate targets in the image and determine their position and size
-
-Target segmentation
-Simply understood, it is a pixel level classification.
-He can distinguish foreground and background at the pixel level, and at a higher level, he can also identify and classify targets
-
 In summary,
 The value of CNN:
-
-
-
 Being able to effectively reduce the dimensionality of images with large amounts of data into small amounts of data (without affecting the results)
 
 Ability to preserve the features of images, similar to human visual principles
 
+
 The basic principle of CNN:
-
-
 
 Convolutional layer - The main function is to preserve the features of the image
 
