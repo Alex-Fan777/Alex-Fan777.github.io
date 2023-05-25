@@ -153,7 +153,7 @@ Reference:
 https://www.youtube.com/watch?v=aircAruvnKk
 https://blog.csdn.net/WangYouJin321/article/details/90691112
 https://aws.amazon.com/cn/what-is/neural-network/
-
+Some explaination are from chatgpt and I rewrite it with my own understading of the knowledge.
 
 
 
