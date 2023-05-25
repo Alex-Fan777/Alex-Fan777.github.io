@@ -2,11 +2,10 @@
 
 ## defination of loss function
 
-loss function is a function that maps an event or values of one or more variables onto a real number intuitively representing some "cost" associated with the event.
+A loss function is a mathematical function that assigns a real number to an event or the values of one or more variables. This number typically represents a measure of "cost" or "risk" associated with the event.
 
-The loss function can include items from multiple levels of the hierarchy. In a short,The loss function or cost function is a function that maps the values of a 
-random event or its related random variables to non negative real numbers to represent the "risk" or "loss" of the random event. In application, the loss function 
-is usually associated with optimization problems as a learning criterion, that is, the model is solved and evaluated by minimizing the loss function.
+The purpose of a loss function is to quantify the discrepancy between the predicted outcome and the actual
+outcome, providing a basis for optimization in various applications. In practice, the loss function is commonly utilized as a learning criterion, guiding the model's optimization process by minimizing the assigned loss. The loss function may incorporate components from different levels of a hierarchical system, allowing for a comprehensive evaluation of the event or variables involved.
 
 ## some loss function
 
@@ -37,12 +36,10 @@ SVM uses this loss function.
 
 ## Multiple loss function
 
-In multi-task learning, multiple tasks are solved jointly, sharing inductive bias between them. Multi-task learning is inherently a multi-objective problem 
-because different tasks may conflict, necessitating a trade-off. A common compromise is to optimize a proxy objective that minimizes a weighted linear
-combination of per-task losses. However, this workaround is only valid when the tasks do not compete, which is rarely the case.
+In the context of multi-task learning, multiple tasks are tackled simultaneously, leveraging shared knowledge between them. Multi-task learning inherently involves addressing multiple objectives, as different tasks may have conflicting requirements, requiring a trade-off. To handle this, a common approach is to optimize a proxy objective that combines per-task losses through a weighted linear combination. However, this approach is only effective when the tasks are not 
+in direct competition, which is often not the case.
 
-Generally, there is a balance between multiple losses, and even for single tasks, there will be weight penalty items. A relatively simple combination is
-usually achieved by adjusting hyperparameters.
+In general, there exists a delicate balance among multiple losses, and even for individual tasks, there may be penalties associated with adjusting weights. Achieving an appropriate combination typically involves fine-tuning hyperparameters to strike a suitable compromise.
 
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/c0b5d2bd-671a-4b4c-a9b8-d25ed1d4e1ba)
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/7106135b-7407-4931-b044-84230a7671dc)
@@ -61,7 +58,7 @@ BaseLoss is used to provide a unified interface and shared functions for specifi
 
 ### CrossEntropyLossFlat
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/fc4fbc97-8db0-45b4-b3b6-9f22e9589115)
-CrossEntropyLossFlat is commonly used in multi category classification tasks, especially when the target label is in the form of one hot encoding. It provides a convenient and efficient way to calculate the cross entropy loss, and can be seamlessly integrated with other fastai functions (such as model training and verification).
+CrossEntropyLossFlat is a widely used loss function in multi-category classification tasks, particularly when the target labels are represented using one-hot encoding. It offers a convenient and efficient approach to compute the cross-entropy loss. Moreover, it seamlessly integrates with other fastai functions, such as model training and validation, facilitating a streamlined workflow.
 
 What is CrossEntrypy function?
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/ce171666-dfe6-4d1c-a6b4-c36a2e90e386)
@@ -77,7 +74,7 @@ The reason why we choose the Crossentrypy is that this loss functions is the bes
 
 
 ## CNN
-Convolutional neural networks (CNN or ConvNet) are a deep learning network architecture that learns directly from data. CNN is particularly suitable for finding patterns in images to recognize objects, classes, and categories. They can also effectively classify audio, time series, and signal data.
+Convolutional neural networks (CNN or ConvNet) are a type of deep learning network architecture designed to learn directly from data. CNNs are especially well-suited for detecting and identifying patterns in images, enabling object recognition, class prediction, and categorization tasks. However, CNNs are not limited to image processing alone; they can also effectively classify other types of data such as audio, time series, and signal data.
 
 Before the emergence of CNN, images were a challenge for artificial intelligence for two reasons:
 
@@ -89,21 +86,23 @@ Now, any random image is 1000 × Above 1000 pixels, each pixel has three RGB par
 
 
 
-If we handle a 1000 × We need to process 3 million parameters for a 1000 pixel image!
-one thousand × one thousand × 3=3,000,000
-Processing such a large amount of data is very resource intensive, and this is only a relatively small image!
-The first problem solved by convolutional neural networks - CNN is to "simplify complex problems", reduce a large number of parameters into a small number of parameters, and then perform processing.
-More importantly, in most scenarios, dimensionality reduction does not affect the results. For example, reducing a 1000 pixel image to 200 pixels does not affect the visual recognition of whether the image is a cat or a dog, and the same applies to machines.
+When processing a 1000 × 1000 pixel image, we encounter the challenge of dealing with a massive number of parameters, specifically 3 million parameters. This poses a significant resource burden, even for a relatively small image.
 
-The convolutional layer is responsible for extracting local features in the image; The pooling layer is used to significantly reduce the magnitude of parameters (dimensionality reduction); The fully connected layer is similar to the part of a traditional neural network, used to output the desired results.
+Convolutional neural networks (CNNs) address this issue by simplifying complex problems and reducing the number of parameters to be processed. This reduction allows for more efficient computation. Importantly, in most scenarios, dimensionality reduction does not compromise the results. For example, reducing a 1000 pixel image to 200 pixels does not hinder visual recognition tasks like distinguishing between a cat and a dog, and the same applies to machine learning algorithms.
+
+The convolutional layer in a CNN is responsible for extracting local features from the image. The pooling layer plays a crucial role in dimensionality reduction by significantly reducing the number of parameters. Finally, the fully connected layer resembles the traditional neural network structure and is employed to produce the desired output results.
 
 Convolution - Extracting Features
 
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/db66a594-172e-4d37-95d1-86706fc99c02)
 Pooling layer (down sampling) - data dimensionality reduction to avoid overfitting
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/5d5481aa-472e-4e6d-8615-6d14bd52acbd)
-In the above image, we can see that the original image is 20 × 20, we downsample it with a sampling window of 10 × 10, ultimately downsampling it into a 2 × A feature map of size 2. The reason for doing this is because even after completing the convolution, the image is still large (because the convolution kernel is relatively small), so in order to reduce the data dimension, downsampling is performed.
-Conclusion: Pooling layer can reduce the data dimension more effectively than convolution layer, which can not only greatly reduce the amount of calculation, but also effectively avoid overfitting.
+
+In the provided image, we observe that the original image has dimensions of 20 × 20. To reduce the data dimension and computational complexity, we apply downsampling using a sampling window of size 10 × 10. This downsampling operation results in a 2 × A feature map of size 2.
+
+The purpose of downsampling is to decrease the image size even after performing convolutions. Since the convolution kernel is relatively small, the output image can still be large, necessitating dimension reduction. By incorporating a pooling layer, we can effectively reduce the data dimension.
+
+In summary, pooling layers are more efficient in reducing data dimensionality compared to convolution layers. They not only significantly decrease the computational load but also help prevent overfitting, which is beneficial for the overall performance of the model.
 
 Fully connected layer - output results
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/5bca134e-bee9-4c0c-9503-b883ec69581c)
