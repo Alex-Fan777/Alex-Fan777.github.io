@@ -1,4 +1,4 @@
-#How Neural Networks Work
+# How Neural Networks Work
 
 Neural networks are an artificial intelligence method used to teach computers to process data in a way inspired by the human brain. This is a machine learning 
 process called deep learning, which uses interconnected nodes or neurons in a hierarchical structure similar to the human brain. It can create adaptive systems that
@@ -8,7 +8,7 @@ summarizing documents or facial recognition.
 Also,Neural networks can assist computers in making wise decisions with limited human assistance. This is because they can learn and model the relationships between
 nonlinear and complex input and output data.
 
-##The principle of the Neural Networks
+## The principle of the Neural Networks
 The inspiration for neural network architecture comes from the human brain. Human brain cells, known as neurons, form a complex and highly interconnected network
 that can send electrical signals to each other to help humans process information. Similarly, artificial neural networks are composed of artificial neurons that
 work together to solve problems. Artificial neurons are software modules called nodes; Artificial neural networks are software programs or algorithms that use
@@ -68,7 +68,7 @@ use the activation function for calculation.
 The next neuron weighted synapse may be Distance to the city and Bedrooms. Therefore, neurons work in a very flexible way, conducting comprehensive searches to
 find specific things.
 
-##How does Neural Netwaork learn
+## How does Neural Netwaork learn
 Let's make an analogy first. The learning of neural networks is closely related to our normal learning style. We first complete a certain amount of work, receive
 correction from the coach, and next time complete this work in a better way. Similarly, neural networks require trainers to describe the network's response to
 inputs. Calculate an error value (also known as a cost function) using the difference between the actual and predicted values and send it back to the system.
@@ -86,7 +86,7 @@ reduced to the smallest possible level.
 The above process is called backpropagation and continues through the network until the error value is kept to a minimum.
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/fa244bdd-7f9e-4acf-9db5-737ad95a17b6)
 
-##What are the types of neural networks?
+## What are the types of neural networks?
 
 Feedforward neural network
 The feedforward neural network processes data in a one-way manner from input node to output node. Each node in one layer is connected to each node in the next
@@ -107,7 +107,7 @@ useful for image classification because they can extract relevant features from 
 easier to handle without losing features that are crucial for making good predictions. Each hidden layer extracts and processes different image features, such as
 edges, colors, and depth.
 
-#Deep learning
+# Deep learning
 Deep learning is driven by neural network layers. A neural network is loosely modeled by a series of algorithms based on the workings of the human brain, using
 a large amount of data for training, i.e. configuring the nerves of the neural network. After training, the deep learning model can process new data, ingest and
 analyze data from multiple sources in real-time, without human intervention. In deep learning, the Graphics Processing Unit (GPU) can simultaneously process
