@@ -1,6 +1,6 @@
-#Loss function
+# Loss function
 
-##defination of loss function
+## defination of loss function
 
 loss function is a function that maps an event or values of one or more variables onto a real number intuitively representing some "cost" associated with the event.
 
@@ -8,7 +8,7 @@ The loss function can include items from multiple levels of the hierarchy. In a 
 random event or its related random variables to non negative real numbers to represent the "risk" or "loss" of the random event. In application, the loss function 
 is usually associated with optimization problems as a learning criterion, that is, the model is solved and evaluated by minimizing the loss function.
 
-##some loss function
+## some loss function
 
 The 0-1 loss function directly corresponds to the number of classification errors, but it is a non convex function and is not applicable.
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/3a14b94f-ecb5-4ac3-8302-510e790ba570)
@@ -35,7 +35,7 @@ The standard form of Hinge loss function is as follows:
 Relatively high robustness, insensitive to outliers and noise
 SVM uses this loss function.
 
-##Multiple loss function
+## Multiple loss function
 
 In multi-task learning, multiple tasks are solved jointly, sharing inductive bias between them. Multi-task learning is inherently a multi-objective problem 
 because different tasks may conflict, necessitating a trade-off. A common compromise is to optimize a proxy objective that minimizes a weighted linear
@@ -48,18 +48,18 @@ usually achieved by adjusting hyperparameters.
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/7106135b-7407-4931-b044-84230a7671dc)
 
 
-##Multi task learning focuses on how to optimize a model containing multiple objective loss function. Usually, the most direct method is to combine these 
+## Multi task learning focuses on how to optimize a model containing multiple objective loss function. Usually, the most direct method is to combine these 
 loss function through a linear function:
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/3a76357e-643f-47a6-8d1b-85243e621213)
 
-##Loss functions in fast ai
+## Loss functions in fast ai
 
-###Base Loss
+### Base Loss
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/ed03e0bc-3205-4d56-b13b-4c43876d4066)
 It does not perform specific calculations on its own, but rather provides some common methods and properties for subclasses.
 BaseLoss is used to provide a unified interface and shared functions for specific loss function. It defines the basic flow and parameters of loss calculation, so that different loss function can be easily expanded and implemented.
 
-###CrossEntropyLossFlat
+### CrossEntropyLossFlat
 ![image](https://github.com/Alex-Fan777/Alex-Fan777.github.io/assets/132428764/fc4fbc97-8db0-45b4-b3b6-9f22e9589115)
 CrossEntropyLossFlat is commonly used in multi category classification tasks, especially when the target label is in the form of one hot encoding. It provides a convenient and efficient way to calculate the cross entropy loss, and can be seamlessly integrated with other fastai functions (such as model training and verification).
 
@@ -76,7 +76,7 @@ In summary, Cross-entropy is a measure of the difference between two probability
 The reason why we choose the Crossentrypy is that this loss functions is the best to predict the possibility of the real machine to do this.
 
 
-##CNN
+## CNN
 Convolutional neural networks (CNN or ConvNet) are a deep learning network architecture that learns directly from data. CNN is particularly suitable for finding patterns in images to recognize objects, classes, and categories. They can also effectively classify audio, time series, and signal data.
 
 Before the emergence of CNN, images were a challenge for artificial intelligence for two reasons:
